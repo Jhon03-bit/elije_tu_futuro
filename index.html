@@ -229,63 +229,115 @@
 
 
 
- <!-- Test Vocacional Mejorado -->
+<!-- Test Vocacional Mejorado -->
 <section id="test" class="py-20 px-6 bg-blue-50" data-aos="zoom-in-up">
-  <div class="max-w-xl mx-auto bg-white p-8 rounded-3xl shadow-xl">
+  <div class="max-w-2xl mx-auto bg-white p-8 rounded-3xl shadow-xl">
     <h2 class="text-3xl font-bold text-center text-blue-700 mb-6">🎯 Test Vocacional</h2>
-    <p class="mb-6 text-center text-gray-700 text-lg">¿Qué actividad prefieres hacer?</p>
+    <p class="mb-6 text-center text-gray-700 text-lg">Responde las siguientes preguntas:</p>
 
-    <div class="grid gap-4">
-      <button data-aos="fade-left" data-aos-delay="100" onclick="mostrarResultado('ingenieria')" class="transition duration-300 ease-in-out transform hover:scale-105 bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-3 px-5 rounded-lg shadow hover:from-indigo-600 focus:ring-4 focus:ring-blue-300">
-        Resolver problemas con tecnología
-      </button>
-      <button data-aos="fade-right" data-aos-delay="200" onclick="mostrarResultado('psicologia')" class="transition duration-300 ease-in-out transform hover:scale-105 bg-gradient-to-r from-pink-500 to-rose-500 text-white py-3 px-5 rounded-lg shadow hover:from-rose-600 focus:ring-4 focus:ring-pink-300">
-        Ayudar a otras personas
-      </button>
-      <button data-aos="fade-left" data-aos-delay="300" onclick="mostrarResultado('negocios')" class="transition duration-300 ease-in-out transform hover:scale-105 bg-gradient-to-r from-yellow-500 to-amber-500 text-white py-3 px-5 rounded-lg shadow hover:from-amber-600 focus:ring-4 focus:ring-yellow-300">
-        Dirigir equipos o crear empresas
-      </button>
-      <button data-aos="fade-right" data-aos-delay="400" onclick="mostrarResultado('educacion')" class="transition duration-300 ease-in-out transform hover:scale-105 bg-gradient-to-r from-green-500 to-emerald-500 text-white py-3 px-5 rounded-lg shadow hover:from-emerald-600 focus:ring-4 focus:ring-green-300">
-        Enseñar y compartir conocimiento
-      </button>
-      <button data-aos="fade-up" data-aos-delay="500" onclick="mostrarResultado('creativo')" class="transition duration-300 ease-in-out transform hover:scale-105 bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white py-3 px-5 rounded-lg shadow hover:from-fuchsia-600 focus:ring-4 focus:ring-purple-300">
-        Diseñar, dibujar o crear contenido
-      </button>
-    </div>
+    <form id="testForm" class="space-y-8">
+      <!-- Pregunta 1 -->
+      <div>
+        <p class="font-semibold text-gray-800">1. ¿Qué actividad prefieres?</p>
+        <label><input type="radio" name="p1" value="ingenieria" required> Resolver problemas tecnológicos</label><br>
+        <label><input type="radio" name="p1" value="psicologia"> Ayudar emocionalmente a otros</label><br>
+        <label><input type="radio" name="p1" value="negocios"> Organizar equipos o vender productos</label><br>
+        <label><input type="radio" name="p1" value="educacion"> Enseñar a otras personas</label><br>
+        <label><input type="radio" name="p1" value="creativo"> Diseñar o crear contenido visual</label>
+      </div>
 
-    <div id="resultado" class="mt-8 text-center text-xl text-indigo-700 font-semibold" data-aos="fade-in" data-aos-delay="600"></div>
+      <!-- Pregunta 2 -->
+      <div>
+        <p class="font-semibold text-gray-800">2. ¿Qué materia te gusta más?</p>
+        <label><input type="radio" name="p2" value="ingenieria" required> Matemáticas o física</label><br>
+        <label><input type="radio" name="p2" value="psicologia"> Ciencias sociales o biología</label><br>
+        <label><input type="radio" name="p2" value="negocios"> Economía o gestión</label><br>
+        <label><input type="radio" name="p2" value="educacion"> Comunicación o historia</label><br>
+        <label><input type="radio" name="p2" value="creativo"> Arte o música</label>
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div>
+        <p class="font-semibold text-gray-800">3. ¿Qué ambiente prefieres para trabajar?</p>
+        <label><input type="radio" name="p3" value="ingenieria" required> Laboratorio o oficina técnica</label><br>
+        <label><input type="radio" name="p3" value="psicologia"> Consultorio o centros sociales</label><br>
+        <label><input type="radio" name="p3" value="negocios"> Oficina de empresa o proyectos</label><br>
+        <label><input type="radio" name="p3" value="educacion"> Colegio o universidad</label><br>
+        <label><input type="radio" name="p3" value="creativo"> Estudio de diseño o producción</label>
+      </div>
+
+      <!-- Pregunta 4 -->
+      <div>
+        <p class="font-semibold text-gray-800">4. ¿Cuál de estas te llama más la atención?</p>
+        <label><input type="radio" name="p4" value="gastronomia" required> Cocinar platos creativos</label><br>
+        <label><input type="radio" name="p4" value="ingenieria"> Programar o construir sistemas</label><br>
+        <label><input type="radio" name="p4" value="psicologia"> Escuchar y orientar personas</label><br>
+        <label><input type="radio" name="p4" value="creativo"> Crear contenido para redes sociales</label><br>
+        <label><input type="radio" name="p4" value="negocios"> Crear tu propia marca</label>
+      </div>
+
+      <!-- Botón para enviar -->
+      <div class="text-center">
+        <button type="submit" class="mt-6 px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition">
+          Ver mis resultados
+        </button>
+      </div>
+    </form>
+
+    <!-- Resultado -->
+    <div id="resultado" class="mt-10 text-center text-xl font-semibold text-indigo-700"></div>
   </div>
 </section>
 
-<!-- Script para mostrar resultado -->
 <script>
-  function mostrarResultado(carrera) {
+  document.getElementById('testForm').addEventListener('submit', function (e) {
+    e.preventDefault()
+    const respuestas = ['p1', 'p2', 'p3', 'p4']
+    const conteo = {}
+
+    respuestas.forEach(p => {
+      const r = document.querySelector(`input[name="${p}"]:checked`)
+      if (r) {
+        const val = r.value
+        conteo[val] = (conteo[val] || 0) + 1
+      }
+    })
+
+    let sugerida = Object.entries(conteo).sort((a, b) => b[1] - a[1])[0]?.[0]
+
     let mensaje = ""
-    switch (carrera) {
+    switch (sugerida) {
       case 'ingenieria':
-        mensaje = "✅ Podrías destacar en Ingeniería o carreras tecnológicas."
+        mensaje = "🔧 Carreras sugeridas: Ingeniería de Software, Industrial, Civil o Mecatrónica."
         break
       case 'psicologia':
-        mensaje = "✅ Psicología, Trabajo Social o áreas de salud serían ideales para ti."
+        mensaje = "🧠 Carreras sugeridas: Psicología, Trabajo Social o Terapia Ocupacional."
         break
       case 'negocios':
-        mensaje = "✅ Considera Administración, Marketing o Emprendimiento."
+        mensaje = "💼 Carreras sugeridas: Administración, Contabilidad, Marketing, Negocios Internacionales."
         break
       case 'educacion':
-        mensaje = "✅ Educación, Pedagogía o ciencias humanas te irían muy bien."
+        mensaje = "📚 Carreras sugeridas: Educación Inicial, Primaria, Secundaria o Pedagogía."
         break
       case 'creativo':
-        mensaje = "✅ Diseño, Comunicación o carreras artísticas serían tu fuerte."
+        mensaje = "🎨 Carreras sugeridas: Diseño Gráfico, Animación Digital, Fotografía, Comunicación Audiovisual."
         break
+      case 'gastronomia':
+        mensaje = "🍳 Carreras sugeridas: Gastronomía, Pastelería Profesional o Administración de Restaurantes."
+        break
+      default:
+        mensaje = "No se pudo determinar una carrera. Intenta nuevamente."
     }
+
     document.getElementById('resultado').textContent = mensaje
-  }
+  })
 </script>
+
 
 
   <!-- Carreras -->
   <section id="carreras" class="py-20 px-6 max-w-7xl mx-auto" data-aos="fade-up">
-    <h2 class="text-3xl font-bold text-center mb-12">Carreras recomendadas</h2>
+    <h2 class="text-3xl font-bold text-center mb-12">Algunas carreras recomendadas</h2>
     <div class="grid md:grid-cols-3 gap-8">
       <div class="bg-white rounded-lg shadow p-6">
         <h3 class="text-xl font-bold">Ingeniería de Software</h3>
@@ -426,4 +478,5 @@
     }
   </script>
 </body>
+
 </html>
