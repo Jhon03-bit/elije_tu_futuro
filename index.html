@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elige Tu Futuro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Inter', sans-serif;
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-in-out both;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .slide-up {
+      animation: slideUp 1s ease-in-out both;
+    }
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    .zoom-in:hover {
+      transform: scale(1.03);
+      transition: transform 0.3s ease-in-out;
+    }
+    .bounce {
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+    .fade-left {
+      animation: fadeLeft 1s ease-in-out both;
+    }
+    @keyframes fadeLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    .fade-right {
+      animation: fadeRight 1s ease-in-out both;
+    }
+    @keyframes fadeRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    .fade-zoom {
+      animation: fadeZoom 1s ease-in-out both;
+    }
+    @keyframes fadeZoom {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    @media (max-width: 768px) {
+      
+      .text-5xl {
+        font-size: 2rem;
+      }
+      .text-3xl {
+        font-size: 1.5rem;
+      }
+      .container,
+      .max-w-5xl,
+      .max-w-4xl,
+      .max-w-xl {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      nav ul li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+ <!-- Navbar -->
+  <header class="fixed top-0 w-full z-50 shadow-md backdrop-blur bg-white bg-opacity-70 fade-in">
+    <div class="container mx-auto px-4 py-4 flex flex-wrap justify-between items-center">
+      <a href="#" class="text-2xl font-extrabold text-blue-700 hover:text-blue-800 transition duration-300">🎓 Elige Tu Futuro</a>
+      <button class="md:hidden text-blue-700 text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="hidden md:flex flex-col md:flex-row md:space-x-6 text-sm space-y-2 md:space-y-0">
+        <li><a href="#consejos" class="hover:text-blue-500 transition duration-300 ease-in-out">Consejos</a></li>
+        <li><a href="#infoutil" class="hover:text-blue-500 transition duration-300 ease-in-out">Info útil</a></li>
+        <li><a href="#test" class="hover:text-blue-500 transition duration-300 ease-in-out">Test</a></li>
+        <li><a href="#carreras" class="hover:text-blue-500 transition duration-300 ease-in-out">Carreras</a></li>
+        <li><a href="#datosperu" class="hover:text-blue-500 transition duration-300 ease-in-out">Datos claves</a></li>
+        <li><a href="#contacto" class="hover:text-blue-500 transition duration-300 ease-in-out">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 to-green-400 text-white px-6 text-center fade-zoom slide-up">
+    <div class="fade-in">
+      <h1 class="text-5xl md:text-4xl sm:text-3xl font-extrabold mb-4 slide-up">¿No sabes qué carrera estudiar?</h1>
+      <p class="text-lg mb-6 slide-up">Descubre tus habilidades, intereses y elige tu camino.</p>
+      <a href="#consejos" class="inline-flex items-center gap-2 bg-white text-blue-600 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-blue-100 transition bounce pulse">
+        <span>Comenzar</span> <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Consejos -->
+  <section id="consejos" class="py-20 px-6 max-w-7xl mx-auto" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center mb-12">¿Cómo elegir tu carrera ideal?</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-lg shadow p-6 hover:shadow-xl transition zoom-in">
+        <h3 class="text-xl font-semibold mb-2">Conócete</h3>
+        <p>Identifica tus gustos, fortalezas y lo que no te gusta hacer.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6 hover:shadow-xl transition zoom-in">
+        <h3 class="text-xl font-semibold mb-2">Explora opciones</h3>
+        <p>Investiga carreras, salidas laborales y el día a día profesional.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6 hover:shadow-xl transition zoom-in">
+        <h3 class="text-xl font-semibold mb-2">Haz pruebas</h3>
+        <p>Realiza tests vocacionales o prueba con cursos introductorios.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6 hover:shadow-xl transition zoom-in">
+        <h3 class="text-xl font-semibold mb-2">Consulta a profesionales</h3>
+        <p>Habla con personas que trabajen en el área que te interesa para conocer su experiencia.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6 hover:shadow-xl transition zoom-in">
+        <h3 class="text-xl font-semibold mb-2">Evalúa tus oportunidades</h3>
+        <p>Considera tus recursos, ubicación y opciones de becas o financiamiento.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6 hover:shadow-xl transition zoom-in">
+        <h3 class="text-xl font-semibold mb-2">Piensa a largo plazo</h3>
+        <p>Reflexiona sobre cómo te gustaría vivir en 5 o 10 años y qué carrera te acercaría a eso.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Sección Universidad vs Instituto -->
+<section id="uni-vs-insti" class="py-20 px-6 bg-blue-50" data-aos="zoom-in-up">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">¿Universidad o Instituto?</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Universidad -->
+      <div class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition duration-300">
+        <h3 class="text-2xl font-bold text-blue-700 mb-4">🎓 Universidad</h3>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li><strong>Duración:</strong> 5 a 6 años (profesional + bachillerato).</li>
+          <li><strong>Grado obtenido:</strong> Bachiller y posibilidad de Maestría.</li>
+          <li><strong>Enfoque:</strong> Académico, investigación, teoría y liderazgo.</li>
+          <li><strong>Ejemplos en Perú:</strong> UNMSM, PUCP, UNI, UNSAAC.</li>
+          <li><strong>Campo laboral:</strong> Empresas privadas, públicas o emprendimiento profesional.</li>
+          <li><strong>Ingreso promedio:</strong> Hasta S/4,000 según carrera y experiencia.</li>
+        </ul>
+      </div>
+
+      <!-- Instituto -->
+      <div class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition duration-300">
+        <h3 class="text-2xl font-bold text-green-700 mb-4">🛠️ Instituto</h3>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li><strong>Duración:</strong> 2 a 3 años (formación técnica).</li>
+          <li><strong>Grado obtenido:</strong> Título Técnico Profesional.</li>
+          <li><strong>Enfoque:</strong> Práctico, operativo, habilidades técnicas.</li>
+          <li><strong>Ejemplos en Perú:</strong> SENATI, TECSUP, Cibertec, IDAT.</li>
+          <li><strong>Campo laboral:</strong> Sector industrial, técnico o técnico-administrativo.</li>
+          <li><strong>Ingreso promedio:</strong> Desde S/1,200 hasta S/3,000.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="mt-10 text-center text-lg text-gray-700">Ambas opciones son valiosas. Elige la que se adapte a tus metas, recursos y estilo de aprendizaje.</p>
+  </div>
+</section>
+
+
+
+ <!-- Test Vocacional Mejorado -->
+<section id="test" class="py-20 px-6 bg-blue-50" data-aos="zoom-in-up">
+  <div class="max-w-xl mx-auto bg-white p-8 rounded-3xl shadow-xl">
+    <h2 class="text-3xl font-bold text-center text-blue-700 mb-6">🎯 Test Vocacional</h2>
+    <p class="mb-6 text-center text-gray-700 text-lg">¿Qué actividad prefieres hacer?</p>
+
+    <div class="grid gap-4">
+      <button data-aos="fade-left" data-aos-delay="100" onclick="mostrarResultado('ingenieria')" class="transition duration-300 ease-in-out transform hover:scale-105 bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-3 px-5 rounded-lg shadow hover:from-indigo-600 focus:ring-4 focus:ring-blue-300">
+        Resolver problemas con tecnología
+      </button>
+      <button data-aos="fade-right" data-aos-delay="200" onclick="mostrarResultado('psicologia')" class="transition duration-300 ease-in-out transform hover:scale-105 bg-gradient-to-r from-pink-500 to-rose-500 text-white py-3 px-5 rounded-lg shadow hover:from-rose-600 focus:ring-4 focus:ring-pink-300">
+        Ayudar a otras personas
+      </button>
+      <button data-aos="fade-left" data-aos-delay="300" onclick="mostrarResultado('negocios')" class="transition duration-300 ease-in-out transform hover:scale-105 bg-gradient-to-r from-yellow-500 to-amber-500 text-white py-3 px-5 rounded-lg shadow hover:from-amber-600 focus:ring-4 focus:ring-yellow-300">
+        Dirigir equipos o crear empresas
+      </button>
+      <button data-aos="fade-right" data-aos-delay="400" onclick="mostrarResultado('educacion')" class="transition duration-300 ease-in-out transform hover:scale-105 bg-gradient-to-r from-green-500 to-emerald-500 text-white py-3 px-5 rounded-lg shadow hover:from-emerald-600 focus:ring-4 focus:ring-green-300">
+        Enseñar y compartir conocimiento
+      </button>
+      <button data-aos="fade-up" data-aos-delay="500" onclick="mostrarResultado('creativo')" class="transition duration-300 ease-in-out transform hover:scale-105 bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white py-3 px-5 rounded-lg shadow hover:from-fuchsia-600 focus:ring-4 focus:ring-purple-300">
+        Diseñar, dibujar o crear contenido
+      </button>
+    </div>
+
+    <div id="resultado" class="mt-8 text-center text-xl text-indigo-700 font-semibold" data-aos="fade-in" data-aos-delay="600"></div>
+  </div>
+</section>
+
+<!-- Script para mostrar resultado -->
+<script>
+  function mostrarResultado(carrera) {
+    let mensaje = ""
+    switch (carrera) {
+      case 'ingenieria':
+        mensaje = "✅ Podrías destacar en Ingeniería o carreras tecnológicas."
+        break
+      case 'psicologia':
+        mensaje = "✅ Psicología, Trabajo Social o áreas de salud serían ideales para ti."
+        break
+      case 'negocios':
+        mensaje = "✅ Considera Administración, Marketing o Emprendimiento."
+        break
+      case 'educacion':
+        mensaje = "✅ Educación, Pedagogía o ciencias humanas te irían muy bien."
+        break
+      case 'creativo':
+        mensaje = "✅ Diseño, Comunicación o carreras artísticas serían tu fuerte."
+        break
+    }
+    document.getElementById('resultado').textContent = mensaje
+  }
+</script>
+
+
+  <!-- Carreras -->
+  <section id="carreras" class="py-20 px-6 max-w-7xl mx-auto" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center mb-12">Carreras recomendadas</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="text-xl font-bold">Ingeniería de Software</h3>
+        <p>Diseño y desarrollo de sistemas. Alta demanda laboral.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="text-xl font-bold">Psicología</h3>
+        <p>Estudio del comportamiento humano. Escucha y apoyo emocional.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="text-xl font-bold">Administración</h3>
+        <p>Gestión de proyectos y equipos. Campo versátil y dinámico.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="text-xl font-bold">Educación Inicial</h3>
+        <p>Formación de niños pequeños. Fundamental para el desarrollo.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="text-xl font-bold">Arquitectura</h3>
+        <p>Diseño de espacios funcionales y artísticos. Creatividad técnica.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="text-xl font-bold">Diseño Gráfico</h3>
+        <p>Comunicación visual, marcas, ilustración y medios digitales.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Información útil -->
+<section id="infoutil" class="py-20 px-6 bg-white" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">Información útil para tu elección</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="p-6 rounded-lg shadow bg-gray-100">
+        <h3 class="text-xl font-semibold mb-2">💼 Campo laboral en Perú</h3>
+        <p>Consulta en portales como <strong>Trabajando.pe</strong> o <strong>LinkedIn Perú</strong> qué carreras tienen mayor demanda. En 2025, destacan las áreas de tecnología, salud, logística y educación técnica.</p>
+      </div>
+
+      <div class="p-6 rounded-lg shadow bg-gray-100">
+        <h3 class="text-xl font-semibold mb-2">💸 Nivel de ingresos promedio</h3>
+        <p>Según <strong>Pontificia Universidad Católica del Perú (PUCP)</strong> y <strong>Ministerio de Trabajo (MTPE)</strong>, carreras como Ingeniería de Sistemas, Medicina y Marketing tienen sueldos iniciales entre S/ 2,500 y S/ 4,500. Las técnicas oscilan entre S/ 1,200 y S/ 2,500.</p>
+      </div>
+
+      <div class="p-6 rounded-lg shadow bg-gray-100">
+        <h3 class="text-xl font-semibold mb-2">📍 Ubicación y modalidad de estudios</h3>
+        <p>Existen universidades públicas y privadas en casi todas las regiones. Además, puedes estudiar de forma <strong>presencial, semipresencial o virtual</strong>. Instituciones como la <strong>UTP, SENATI, TECSUP y UNMSM</strong> ofrecen estas opciones.</p>
+      </div>
+
+      <div class="p-6 rounded-lg shadow bg-gray-100">
+        <h3 class="text-xl font-semibold mb-2">📊 Duración y nivel académico</h3>
+        <p>Las carreras universitarias duran entre 5 y 6 años. Las carreras técnicas o tecnológicas duran entre 2 y 3 años y tienen alta empleabilidad desde el segundo ciclo.</p>
+      </div>
+
+      <div class="p-6 rounded-lg shadow bg-gray-100">
+        <h3 class="text-xl font-semibold mb-2">📚 Becas y apoyo económico</h3>
+        <p>Postula a <strong>Beca 18, Beca Permanencia, Pronabec</strong> u otras becas regionales. También existen becas propias de universidades privadas como UPC, UDEP o UTP.</p>
+      </div>
+
+      <div class="p-6 rounded-lg shadow bg-gray-100">
+        <h3 class="text-xl font-semibold mb-2">🎯 Testimonios y orientación</h3>
+        <p>Escucha experiencias reales en redes como <strong>TikTok o YouTube Perú</strong>, donde estudiantes comparten sus carreras, sueldos y retos. También puedes hablar con egresados o usar plataformas como <strong>Ponte en Carrera</strong>.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Sección Datos Perú -->
+  <section id="datosperu" class="py-20 px-6 bg-blue-50 fade-left">
+    <div class="max-w-5xl mx-auto fade-in">
+      <h2 class="text-3xl font-bold text-center mb-12 slide-up">Datos claves</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white shadow p-6 rounded-lg fade-left">
+          <h3 class="text-xl font-bold mb-2">🎓 Universidades reconocidas</h3>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>PUCP – Pontificia Universidad Católica del Perú</li>
+            <li>UNI – Universidad Nacional de Ingeniería</li>
+            <li>UNMSM – Universidad Nacional Mayor de San Marcos</li>
+            <li>UP – Universidad del Pacífico</li>
+            <li>UTEC – Universidad de Ingeniería y Tecnología</li>
+          </ul>
+        </div>
+        <div class="bg-white shadow p-6 rounded-lg fade-right">
+          <h3 class="text-xl font-bold mb-2">📊 Carreras con mayor demanda laboral</h3>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Ingeniería de Sistemas</li>
+            <li>Negocios Internacionales</li>
+            <li>Administración de Empresas</li>
+            <li>Enfermería y Medicina</li>
+            <li>Psicología</li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 mt-8">
+        <div class="bg-white shadow p-6 rounded-lg fade-left">
+          <h3 class="text-xl font-bold mb-2">📚 Becas y oportunidades</h3>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Beca 18 – Programa nacional del PRONABEC</li>
+            <li>Excelencia Académica – Para los mejores talentos del país</li>
+            <li>Beca Permanencia – Para continuar estudios en universidades públicas</li>
+            <li>Convenios internacionales con países como Francia, Japón y Alemania</li>
+          </ul>
+        </div>
+        <div class="bg-white shadow p-6 rounded-lg fade-right">
+          <h3 class="text-xl font-bold mb-2">💰 Salarios en soles peruanos (estimados)</h3>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Ingeniería: S/ 3,000 - S/ 8,000</li>
+            <li>Medicina: S/ 3,500 - S/ 9,000</li>
+            <li>Administración: S/ 2,800 - S/ 6,000</li>
+            <li>Psicología: S/ 2,000 - S/ 4,500</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+
+    <footer class="text-center py-6 text-sm text-gray-500 bg-gray-100">
+    © 2025 Elige Tu Futuro | Desarrollado por QP
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script>
+    function mostrarResultado(area) {
+      const resultado = document.getElementById('resultado');
+      let mensaje = '';
+      switch(area) {
+        case 'ingenieria': mensaje = 'Podrías considerar Ingeniería de Software, Sistemas o Electrónica.'; break;
+        case 'psicologia': mensaje = 'Carreras como Psicología, Trabajo Social o Enfermería pueden interesarte.'; break;
+        case 'negocios': mensaje = 'Te pueden gustar carreras como Administración, Economía o Marketing.'; break;
+        case 'educacion': mensaje = 'Podrías explorar Educación Inicial, Primaria o Ciencias de la Educación.'; break;
+        case 'creativo': mensaje = 'Carreras como Diseño Gráfico, Publicidad o Comunicación pueden ser ideales.'; break;
+      }
+      resultado.textContent = mensaje;
+    }
+  </script>
+</body>
+</html>
